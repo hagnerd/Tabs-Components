@@ -10,7 +10,7 @@ class TabLink {
 
     // Using the custom data attribute get the associated Item element
     this.itemElement = document.querySelector(
-      `.tabs-item[data-tab=${this.data}]`
+      `.tabs-item[data-tab='${this.data}']`
     );
 
     // Using the Item element, create a new instance of the TabItem class
@@ -30,6 +30,7 @@ class TabLink {
     // Add a class named "tabs-link-selected" to this link
     this.element.classList.add("tabs-link-selected");
     // Call the select method on the item associated with this link
+    this.tabItem.select();
   }
 }
 
